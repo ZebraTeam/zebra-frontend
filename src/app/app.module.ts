@@ -10,14 +10,14 @@ import { AppComponent } from './app.component';
 import { ContestService } from './contest.service';
 
 import { environment } from '../environments/environment';
-import { ContestsComponent } from './contests/contests.component';
 import { ContestDetailComponent } from './contest-detail/contest-detail.component';
+import { ContestListComponent } from './contest-list/contest-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContestsComponent,
-    ContestDetailComponent
+    ContestDetailComponent,
+    ContestListComponent
   ],
   imports: [
     BrowserModule,

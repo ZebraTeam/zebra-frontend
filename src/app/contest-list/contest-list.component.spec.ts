@@ -4,9 +4,9 @@ import { Http, HttpModule, BaseRequestOptions,
 import { MockBackend } from '@angular/http/testing';
 
 import { ContestService } from '../contest.service';
-import { ContestDetailComponent } from './contest-detail.component';
+import { ContestListComponent } from './contest-list.component';
 
-describe('ContestDetailComponent', () => {
+describe('ContestListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -26,23 +26,28 @@ describe('ContestDetailComponent', () => {
     });
   });
 
-  let component: ContestDetailComponent;
-  let fixture: ComponentFixture<ContestDetailComponent>;
+  let component: ContestListComponent;
+  let fixture: ComponentFixture<ContestListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContestDetailComponent ]
+      declarations: [ ContestListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContestDetailComponent);
+    fixture = TestBed.createComponent(ContestListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  // TODO: Mock ContestService and set it up
+  it('should display contests', () => {
+    expect()
   });
 });

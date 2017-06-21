@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Http } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -74,7 +74,7 @@ export class ContestService {
 
   private removeContestFromSubject(contest: Contest): void {
     const newContests = this.contests.getValue();
-    _.remove(newContests, c => c.id === contest.id);
+    _.remove(newContests, (c: Contest) => c.id === contest.id);
     this.contests.next(newContests);
   }
 
@@ -86,7 +86,7 @@ export class ContestService {
 
   private updateContestInSubject(contest: Contest): void {
     const newContests = this.contests.getValue();
-    const idx = _.findIndex(newContests, (c) => c.id === contest.id);
+    const idx = _.findIndex(newContests, (c: Contest) => c.id === contest.id);
     if (idx !== -1) {
       newContests[idx] = contest;
       this.contests.next(newContests);

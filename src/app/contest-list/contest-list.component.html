@@ -1,0 +1,18 @@
+<h1>Contests:</h1>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Start time</th>
+    <th>Freeze time</th>
+    <th>End time</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contest of contestService.getContests() | async">
+      <td>{{ contest.name }}</td>
+      <td>{{ contest.startTime | date:"dd.MM.yyyy" }}</td>
+      <td>{{ contest.freezeTime | date:"dd.MM.yyyy" }}</td>
+      <td>{{ contest.endTime | date:"dd.MM.yyyy" }}</td>
+    </tr>
+  </tbody>
+</table>

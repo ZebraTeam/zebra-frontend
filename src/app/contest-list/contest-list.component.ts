@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import { ContestService } from '../contest.service';
 
+
 @Component({
-  selector: 'app-contests',
-  templateUrl: './contests.component.html',
-  styleUrls: ['./contests.component.css'],
-  providers: [ ContestService ]
+  selector: 'app-contest-list',
+  templateUrl: './contest-list.component.html',
+  styleUrls: ['./contest-list.component.css']
 })
-export class ContestsComponent implements OnInit {
+export class ContestListComponent implements OnInit {
 
   constructor(public contestService: ContestService) { }
 
